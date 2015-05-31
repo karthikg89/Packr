@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root 'home#index'
   get 'signup' => 'users#new'
-
+  
+  resources :users #gives each user a unique url
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
