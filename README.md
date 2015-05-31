@@ -1,2 +1,2 @@
 ## Packr
-Turning flikr into something useful
+Turning flickr into something useful
