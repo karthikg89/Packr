@@ -40,6 +40,7 @@ gem 'pg', group: [:development, :production]
 
 group :production do
       gem 'puma'
+      gem 'rails_12factor'
 end
 
 group :development, :test do
