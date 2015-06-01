@@ -44,7 +44,7 @@ def main
   totalSize = f.size
   f.close
 
-  bytesPerPic = 1 << 20 << 4 #16MB
+  bytesPerPic = 16.megabytes
 
   currPos = 0
   pic = 1

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.new(valid_params)
     
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to Packr!"
       redirect_to @user
     else
