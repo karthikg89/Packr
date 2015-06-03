@@ -5,8 +5,12 @@ ruby "2.2.0"
 gem 'rails', '4.2.1'
 # Bootstrap!
 gem 'bootstrap-sass'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'    
 # bcrypt for passwords
 gem 'bcrypt'
+# Use faker to make sample users
+gem 'faker'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :test
 # Use SCSS for stylesheets
