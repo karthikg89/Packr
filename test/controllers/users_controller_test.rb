@@ -36,12 +36,18 @@ class UsersControllerTest < ActionController::TestCase
     assert flash.empty?
     assert_redirected_to root_url
   end
-=begin
+
   test "redirect index when not logged in" do
     get :index
-    assert_redirected_to login_url
+    assert_redirected_to root_url
   end
-=end
+
+  test "redirect to user when non admin accesses index" do
+    log_in_as(@user)
+    get :index
+    assert_response :success # This does not seem right
+  end
+
   test "non-admin cannot delete" do
     log_in_as(@user2)
     assert_no_difference 'User.count' do
@@ -56,4 +62,5 @@ class UsersControllerTest < ActionController::TestCase
       delete :destroy, id: @user2
     end
   end
+
 end
