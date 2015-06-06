@@ -60,3 +60,4 @@ end
 
 # ADDED: png manipulation library
 gem 'oily_png'
+gem 'flickraw'

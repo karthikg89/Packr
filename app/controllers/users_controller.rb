@@ -19,9 +19,9 @@ class UsersController < ApplicationController
     @user = User.new(valid_params)
     
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to Packr!"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to login_url
     else
       render 'new'
     end

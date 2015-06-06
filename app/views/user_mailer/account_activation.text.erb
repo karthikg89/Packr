@@ -1,3 +1,5 @@
-UserMailer#account_activation
+Hi <%= @user.name %>,
+   
+Thanks for joining Packr! Click on this link to activate your account and start sticking it to big brother!
 
-<%= @greeting %>, find me in app/views/user_mailer/account_activation.text.erb
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
