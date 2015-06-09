@@ -1,0 +1,2 @@
+class FlickrAuthController < ApplicationController
+end
