@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
+  get 'flickr_auths/edit'
 
+  get 'password_resets/new'
   get 'password_resets/edit'
 
   root 'home#index'
@@ -10,8 +11,9 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   
-  resources :users #gives each user a unique url
+  resources :users 
   resources :account_activations, only: [:edit]
+  resources :flickr_auths, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
   
   # The priority is based upon order of creation: first created -> highest priority.
